@@ -8,7 +8,7 @@ fn main() {
             println!("big num");
         }
 
-        let condvar = if i % 2 == 0 { "even" } else { "odd" };
+        let condvar = if i % 2 == 0 { println!("even branch"); "even" } else { "odd" };
         println!("{}", condvar);
     }
 }
