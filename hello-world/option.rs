@@ -9,4 +9,6 @@ fn main() {
     println!("index 1: {:?}", get_slice_index(s, 1));
 
     println!("index 3: {:?}", get_slice_index(&x, 3));
+
+    println!("let's try index 4: {}", s.get(4).unwrap_or(&-9998))
 }
