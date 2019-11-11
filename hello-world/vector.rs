@@ -12,4 +12,10 @@ fn main() {
     v2.push("b");
 
     println!("v2 = {:?}", v2);
+
+
+    let mut v3 = vec![1.2, 1.2, 1.5, 1.456, 3.];
+    for i in v3.iter() {
+        println!("v3 has {}", i);
+    }
 }
