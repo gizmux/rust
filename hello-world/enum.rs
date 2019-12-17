@@ -6,7 +6,24 @@ enum Direction {
     Right
 }
 
+impl Direction {
+    fn next(&self) -> Direction {
+        use Direction::*;
+        match *self {
+            Up => Right,
+            Right => Down,
+            Down => Left,
+            Left => Up
+        }
+    }
+}
+
 fn main() {
-    let d = Direction::Up;
+    let mut d = Direction::Up;
     println!("{:?}", d);
+
+    for _ in 1..10 {
+        println!("direction = {:?}", d);
+        d = d.next();
+    }
 }
